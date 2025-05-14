@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    overflow-x: hidden;
+    position: relative;
+    
+    
+}
+/* Header styles */
+header {
+    font-family: 'Louis George Cafe', sans-serif;
+    background-color: #1E1E1E;
+    border-radius: 0px 0px 129px 129px;
+    width: 80%;
+    transform: translate(12%);
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    right: 50px;
+}
+
+.logo {
+    width: 65px;
+    height: auto;
+    position: relative;
+    left: 100px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+/* Navigation link styles */
+.nav-menu li a {
+    color: #D2E0FB;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px; /* Space for the underline effect */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for underline */
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Color for the underline */
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); /* Center the underline */
+    transition: width 0.4s ease; /* Smooth width transition */
+}
+
+.nav-menu li a:hover::after {
+    width: 100%; /* Expand the underline from center */
+}
+
+.nav-menu li a:hover {
+    color: #ffffff; /* Change the text color on hover */
+}
+
+
+/* Blended background */
+/* Default styles for background image */
+.bg-image {
+    position: absolute;    /* Allows for overlapping with other elements */
+    top: 0;               /* Align to the top of the page */
+    left: 0;              /* Align to the left of the page */
+    width: 100vw;         /* Full width of the viewport */
+    height: 105vh;        /* Full height of the viewport */
+    object-fit: cover;    /* Cover the entire area while maintaining aspect ratio */
+    z-index: -2;          /* Ensure it stays behind other content */
+    opacity: 0.7;         /* Adjust opacity for blending */
+    filter: brightness(0.9) contrast(1.1); /* Adjust brightness and contrast */
+}
+
+
+
+
+/* Blended samurai image */
+./* Default styles for desktop and larger screens */
+.samurai-image {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center;     /* Center the image vertically */
+    width: 100%;             /* Full width */
+    height: auto;            /* Adjust height automatically */
+}
+
+.samurai-image img {
+    width: 98vw; 
+    object-fit: cover; 
+    position: absolute;
+    bottom: -1%;            /* Set width to 60% of the viewport width */
+    height: auto;            /* Keep aspect ratio */
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Landing Text */
+.landing {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.text {
+    position: relative;
+    z-index: 1; /* Ensure text stays above the background and samurai */
+}
+
+.graphic {
+    font-family: 'Wave Vero';
+    font-size: 13vw;
+    color: rgba(0, 0, 0, 0.1);
+    display: inline-block;    
+    transition: transform 0.6s ease, opacity 0.4s ease;
+    opacity: 0.9;
+    bottom: 125%;
+    position: relative;
+    overflow: hidden;
+}
+
+.designer {
+    font-family: 'Wave Vero';
+    font-size: 13vw;
+    color: rgba(0, 0, 0, 0.1);
+    display: inline-block;    
+    transition: transform 0.6s ease, opacity 0.4s ease;
+    opacity: 0.9;
+    bottom: -20%;
+    position: relative;
+    overflow: hidden;
+}
+
+.author, .quote {
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 1rem;
+    font-family: 'BlackChancery';
+    transition: transform 0.6s ease, opacity 0.4s ease;
+    opacity: 0.9;
+    position: relative;    
+    left: 95%;
+    overflow: hidden;
+    
+}
+
+/* Hover Effects */
+.graphic:hover {
+    transform: translateX(30px) scale(1.05); /* Slide left and slightly grow */
+    opacity: 1; /* Increase opacity */
+}
+
+.designer:hover {
+    transform: translateX(-30px) scale(1.05); /* Slide right and slightly grow */
+    opacity: 1;
+}
+
+.author:hover, .quote:hover {
+    transform: translateY(-10px); /* Slight upward movement */
+    opacity: 1;
+    font-family: 'Nobel';
+}
+
+/* Initial Animations */
+.graphic {
+    position: absolute;
+    Right: -10vw;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.designer {
+    position: absolute;
+    Left: -10vw;
+    
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.author {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.quote {
+    animation: fadeInUp 1.7s ease-out;
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: -50vw;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        right: -50vw;
+        opacity: 0;
+    }
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Tablet styles (landscape orientation) */
+@media (max-width: 1024px) {
+    .samurai-image img {
+        width: 80vw;         /* Adjust image width for tablets */
+        height: auto;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .samurai-image img {
+        width: 90vw;         /* Make the image wider on mobile screens */
+        height: auto;
+    }
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .graphic, .designer {
+        font-size: 15vw;
+    }
+
+    .samurai-image img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bg-image {
+        width: 100vw;     /* Maintain full width */
+        height: 80vh;     /* Slightly reduce height */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .bg-image {
+        width: 100vw;     /* Maintain full width */
+        height: 70vh;     /* Further reduce height for mobile */
+    }
+}

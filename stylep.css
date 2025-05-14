@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body settings */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #191919;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    font-family: 'Louis George Cafe', sans-serif;
+    background-color: #191919;
+    border-radius: 0px 0px 129px 129px;
+    width: 80%;
+    transform: translate(12%);
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.bg {
+    position: absolute;
+    height: 120vw;
+    width: auto;
+    transform: translate(150px);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    right: 50px;
+}
+
+.logo {
+    width: 65px;
+    height: auto;
+    position: relative;
+    left: 100px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+/* Navigation link styles */
+.nav-menu li a {
+    color: #D2E0FB;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 5px; /* Space for the underline effect */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for underline */
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Color for the underline */
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); /* Center the underline */
+    transition: width 0.4s ease; /* Smooth width transition */
+}
+
+.nav-menu li a:hover::after {
+    width: 100%; /* Expand the underline from center */
+}
+
+.nav-menu li a:hover {
+    color: #ffffff; /* Change the text color on hover */
+}
+
+
+/* Landing Section with Parallax Effect */
+.landing {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.char {
+    position: relative;
+    height: 100%;
+}
+
+
+.intro-text h1 {
+    font-size: 4.5rem;
+    content: '';
+    font-family: 'Garmot';
+    color: white;
+}
+
+
+
+.highlight {
+    font-family:'Buzzbe';
+    font-size: 6rem;
+    color: #B742CF;
+    background: linear-gradient(rgba(183, 66, 207, 1), rgba(221, 72, 156, 1));
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    
+}
+
+
+
+/* Parent container styling */
+
+/* Paragraph styling */
+.About p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+
+
+/* Button styling */
+.btn1 {
+    display: flex;
+    position: relative;
+   
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on the button */
+.btn1:hover {
+    background-color: white;
+    color: #191919;
+}
+
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+    color: #191919;
+}
+
+
+
+/* Section Styles */
+section {
+    padding: 110px 20px;
+}
+
+.experience .card {
+    background: transparent;
+    padding: 10px;
+    margin-left: 60px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.experience h2 {
+    text-align: center;
+    background: linear-gradient(rgba(10, 245, 241, 1), rgba(8, 78, 79, 1));
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+    font-size: 50px;  
+    font-weight: 800; 
+    word-wrap: break-word;
+}
+
+/* General Reset */
+
+
+/* Parallax Background */
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;  
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Design card container */
+.design-card {
+  width: 100%;
+  max-width: 390px;
+  background-color: #2A2A2A;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image inside the card */
+.card-image {
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Card content */
+.card-content {
+  padding: 15px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Icon style */
+.icon {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  right: 15px;
+  bottom: 15px;
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+/* Hover Effect */
+.design-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.design-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+
+
+h4 {
+    font-family: 'poppins';
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    top: -50px;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -20px;
+  gap: 40px; /* Space between each icon */
+  animation: fadeIn 1s ease-out; /* Opening effect */
+}
+
+/* Icon Styles */
+.icon1 {
+  width: 42px;
+  height: 42px;
+  image-resolution: 1500dpi;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInIcon 1s ease-in-out forwards;
+}
+
+.icon1:nth-child(1) { animation-delay: 0.1s; }
+.icon1:nth-child(2) { animation-delay: 0.2s; }
+.icon1:nth-child(3) { animation-delay: 0.3s; }
+.icon1:nth-child(4) { animation-delay: 0.4s; }
+.icon1:nth-child(5) { animation-delay: 0.5s; }
+.icon1:nth-child(6) { animation-delay: 0.6s; }
+
+
+
+/* Keyframes for Fade-in Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInIcon {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Slide from above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Settle into place */
+  }
+}
+
+
+
+footer {
+    padding: 20px;
+    background-color: #0A0A0A;
+}
+
+/* Container */
+.content-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Section Row - For Education and Achievement */
+.section-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 20px;
+  font-weight: 800;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.section p {
+  font-size: 23px;
+  font-family: 'Louis George Cafe', sans-serif;
+  font-weight: 400;
+}
+
+/* Email Row */
+.email-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 45px;
+}
+
+.icon2 img {
+  width: 45px;
+  height: 45px;
+}
+
+.email {
+  font-size: 23px;
+  font-family: 'Louis George Cafe', sans-serif;
+  font-weight: 400;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .intro-text h1 {
+        font-size: 2rem;
+    }
+    .btn {
+        padding: 10px;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .design-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-title {
+    font-size: 16px;
+  }
+}
+
+
+.experience .card:hover {
+    transform: translateX(20px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .icon-row {
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+}
